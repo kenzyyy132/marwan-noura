@@ -561,8 +561,21 @@
       }
     }
 
+    /*
+     * Autoplay on load. Most browsers refuse sound before the guest's first tap; then
+     * "Tap to open" starts it instead. No analyser yet: an AudioContext made without a
+     * tap would stay suspended and silence the song. play() adds it on the first tap.
+     */
+    if (m.autoplay) {
+      wantsPlay = true;
+      audio.src = src;
+      seekToStart();
+      var attempt = audio.play();
+      if (attempt && attempt.catch) attempt.catch(function () { /* blocked until the first tap */ });
+    }
+
     return {
-      start: function () { if (m.startOnOpen) play(); },
+      start: function () { if (m.startOnOpen || m.autoplay) play(); },
     };
   }
 
@@ -623,7 +636,7 @@
       gate.classList.add("is-open");
       main.inert = false;
       root.classList.remove("is-locked");
-      music.start(); // only if music.startOnOpen — inside the tap, so browsers allow audio
+      music.start(); // music.startOnOpen / autoplay — inside the tap, so browsers allow audio
 
       root.classList.add("is-opened");
       setTimeout(playStageIntro, quick ? 0 : 450);

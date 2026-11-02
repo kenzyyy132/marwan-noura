@@ -57,7 +57,8 @@ window.INVITATION_CONFIG = {
     startAt: 0,         // seconds into the track where the performance should begin
     loop: true,         // true: loop back to `startAt`; false: the scene bows out when the song ends
     bpm: 0,             // optional tempo, used for the halo's pulse when live audio analysis isn't available
-    startOnOpen: false, // true: also start the song when the guest opens the invitation
+    autoplay: true,     // true: try to play as soon as the page loads (browsers may wait for a first tap)
+    startOnOpen: true,  // true: start the song when the guest taps "Tap to open" (always allowed)
   },
 
   message: {
