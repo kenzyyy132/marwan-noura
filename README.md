@@ -1,4 +1,4 @@
-# Marwan & Noura — Wedding Invitation · مروان & نورا
+# Marwan & Noura — Engagement Invitation · مروان & نورا
 
 An interactive, single-page invitation built from the couple's invitation artwork.
 Plain HTML, CSS and JavaScript: no framework, no build step, no dependencies.
@@ -15,7 +15,7 @@ It is the original Om Kalthoum musical-evening invitation, in wine red, champagn
 3. **The invitation card.** Rebuilt layer by layer when you scroll to it, with a live countdown.
 4. **The message arch.** Musicians at its corners, lanterns overhead, the original garlands along its sides.
 5. **When & where.** Saturday 28 November 2026, 7:00 PM (Cairo time), a second live countdown,
-   **Signorina Microblading and PMU** with *Get directions* / *View on Maps*, and **Add to calendar**.
+   **دار الدفاع** with *Get directions* / *View on Maps*, and **Add to calendar**.
 6. **Closing.** The card as a keepsake, birds flying off in pairs, share and save buttons.
 
 Behind it all runs the **romantic sky** from the reference invitation: gilded birds and
@@ -48,8 +48,8 @@ following the song's loudness).
 
 ## Publishing
 
-Any static host works (Netlify Drop, GitHub Pages, Vercel, Cloudflare Pages). After deploying, set
-`og:image` in `index.html` to the full `https://…/assets/og-image.jpg` URL so WhatsApp shows the preview.
+Live at **https://marwan-noura.vercel.app/** (Vercel). `index.html` points its canonical URL and
+social preview (`og:url`, `og:image`) at that address; update them if the domain ever changes.
 
 The originals in `assets/` (`marwan & noura.png`, `Ornate Frame Children’s Ring Proposal.png`, the mp3)
 are only inputs for the asset script; the page never loads them, so you can leave them out of the upload.

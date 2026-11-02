@@ -17,7 +17,7 @@ window.INVITATION_CONFIG = {
   },
 
   event: {
-    title: "Wedding Celebration",
+    title: "Engagement Celebration",
     // Local date and time of the event: Saturday, 28 November 2026 at 7:00 PM.
     start: "2026-11-28T19:00",
     durationHours: 4, // used for calendar entries and the "thank you" state
@@ -71,7 +71,7 @@ window.INVITATION_CONFIG = {
   },
 
   share: {
-    title: "Marwan & Noura — Wedding Celebration",
-    text: "You're invited to our wedding on Saturday, 28 November 2026 at 7:00 PM.",
+    title: "Marwan & Noura — Engagement Celebration",
+    text: "You're invited to our engagement on Saturday, 28 November 2026 at 7:00 PM.",
   },
 };

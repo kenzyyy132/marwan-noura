@@ -1,4 +1,4 @@
-/* Wedding invitation — behaviour.  All event data lives in js/config.js. */
+/* Engagement invitation — behaviour.  All event data lives in js/config.js. */
 (function () {
   "use strict";
 
@@ -304,7 +304,7 @@
       var dtStart = event.tz ? stamp(event.start) + "Z" : startStr;
       var dtEnd = event.tz ? stamp(event.end) + "Z" : endStr;
       var ics = [
-        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Wedding Invitation//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Engagement Invitation//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
         "BEGIN:VEVENT",
         "UID:" + startStr + "-" + config.couple.first.toLowerCase() + "-" + config.couple.second.toLowerCase() + "@invitation",
         "DTSTAMP:" + stamp(new Date()) + "Z",
@@ -319,7 +319,7 @@
       var blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
       var a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
-      a.download = config.couple.first + "-and-" + config.couple.second + "-wedding.ics";
+      a.download = config.couple.first + "-and-" + config.couple.second + "-engagement.ics";
       document.body.appendChild(a);
       a.click();
       setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
